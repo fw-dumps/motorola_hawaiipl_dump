@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <!-- CJ:add for MOTO ota , from https://docs.google.com/presentation/d/1m1dhF1987Dq0wn6D2h8giwxmvv7pPwUNcaR_AgAicOs/edit#slide=id.g566c896caf_0_7 -->
+  <allow-in-power-save package="com.motorola.ccc.ota" />
+  <allow-in-data-usage-save package="com.motorola.ccc.ota" />
+    
+  <!-- add for Claro contenedor app-->
+  <allow-in-power-save package="com.claroColombia.contenedor"/>
+  <app-link package="com.claroColombia.contenedor"/>
+  <allow-in-data-usage-save package="com.claroColombia.contenedor"/>
+  
+  <privapp-permissions package="com.claroColombia.contenedor">
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <permission name="android.permission.INSTALL_PACKAGES"/>
+    <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+  </privapp-permissions>
+  
+  <!-- wangying add for PayJoy EKHAWAIPG-7 -->
+  <allow-in-power-save package="com.payjoy.access" />
+  <allow-in-data-usage-save package="com.payjoy.access" />
+  <allow-in-power-save package="com.payjoy.status" />
+  <allow-in-data-usage-save package="com.payjoy.status" />
+
+  <!-- wangying add for AppEnabler EKHAWAIP-2525 -->
+  <allow-in-power-save package="de.telekom.tsc" />
+  <allow-in-power-save-except-idle package="de.telekom.tsc" />
+  
+  <!-- add for telcel contenedor app-->  
+  <allow-in-power-save package="com.telcel.contenedor"/>
+  <app-link package="com.telcel.contenedor"/>
+  <allow-in-data-usage-save package="com.telcel.contenedor"/>
+  
+  <privapp-permissions package="com.telcel.contenedor">
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <permission name="android.permission.INSTALL_PACKAGES"/>
+    <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+  </privapp-permissions>
+
+  <!-- Ji.yang, date20190414, BRApps2, PBGAM-257, FEATURE-4518 -->
+  <allow-in-power-save package="com.motorola.brapps"/>
+  <privapp-permissions package="com.motorola.brapps">
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+  </privapp-permissions>
+  
+  <allow-in-power-save package="com.mediatek.simprocessor"/>
+  
+  <!-- wangying add for EKJAVA-898-->
+  <allow-in-power-save package="co.sitic.pp" />
+  <allow-in-data-usage-save package="co.sitic.pp" />
+  <system-user-whitelisted-app package="co.sitic.pp" />
+
+  <!-- Ji.yang, date20190429, SYSDLL, PBGAM-674, FEATURE-6050 -->
+  <privapp-permissions package="co.sitic.pp">
+    <permission name="android.permission.RECEIVE_SMS"/>
+    <permission name="android.permission.READ_PHONE_STATE"/>
+    <permission name="android.permission.CALL_PHONE"/>
+    <permission name="android.permission.CALL_PRIVILEGED"/>
+    <permission name="android.permission.MODIFY_PHONE_STATE"/>
+  </privapp-permissions>
+
+  <!-- yangyong fix EKHAWAIP-3613 -->
+  <allow-in-power-save package="com.rjio.slc"/>
+
+</permissions>

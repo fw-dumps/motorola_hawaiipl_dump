@@ -1,0 +1,9 @@
+service delete_data_log /vendor/bin/journey.storage.sh
+    class core
+    user root
+    oneshot
+    disabled
+    #seclabel u:r:mtk_hal_camera:s0
+
+on post-fs-data
+    start delete_data_log

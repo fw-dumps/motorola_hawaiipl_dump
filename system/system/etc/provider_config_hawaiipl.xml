@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+  <!--modify by xiao.liang for EKHAWAIP-1429 at 2021/12/9-->
+	<setting type="secure" name="camera_double_tap_power_gesture_disabled" value="0"/>
+
+  <!-- dongwei.lv add for EKHAWAIP-1331 at 2021/11/23, Disable twist gesture in Hawaii+Lite -->
+  <!-- Twist to open camera,0:Disable,1:Rear,2:Front,3:Auto -->
+  <setting type="secure" name="camera_double_twist_open_enabled" value="0"/>
+</resources>
+

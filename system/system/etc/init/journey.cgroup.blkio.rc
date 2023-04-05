@@ -1,0 +1,4 @@
+on init
+    # root group defaut 1000
+    # background default 500 , change to 100
+    write /dev/blkio/background/blkio.weight 100

@@ -1,0 +1,8 @@
+on init
+    mkdir /dev/cpuctl/bg_non_interactive
+    chown system system /dev/cpuctl/bg_non_interactive
+    chown system system /dev/cpuctl/bg_non_interactive/tasks
+    chmod 0664 /dev/cpuctl/bg_non_interactive/tasks
+
+    # root group is 1024 and unable to change
+    write /dev/cpuctl/bg_non_interactive/cpu.shares 512

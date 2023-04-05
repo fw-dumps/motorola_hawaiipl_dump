@@ -1,0 +1,14 @@
+#on post-fs-data
+   #CJ: use for tell app some prop is changed
+#   mkdir /data/local/prop/ 0666 system system
+
+   #CJ: /data/misc/elabel/regulatory_info.png
+#   mkdir /data/misc/elabel/
+#   sync_file /dev/block/platform/bootdevice/by-name/elabel /data/misc/elabel/regulatory_info.png
+#   chown system system /data/misc/elabel/regulatory_info.png
+#   chmod 0664 /data/misc/elabel/regulatory_info.png
+
+#on property:ro.boot.product.hardware.sku=*
+#   setprop persist.radio.multisim.config ${ro.boot.product.hardware.sku}
+
+#on post-fs-data

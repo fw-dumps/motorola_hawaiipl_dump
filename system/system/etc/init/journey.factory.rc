@@ -1,0 +1,11 @@
+on post-fs-data
+    chmod 0777 /sys/bus/i2c/drivers/aw9610x_sar/5-0012/aot_cali
+    chmod 0777 /sys/bus/i2c/drivers/aw9610x_sar/5-0012/awrw
+
+    # Factory SW cannot charge battery over 70% in factory mode
+    write /proc/mtk_battery_cmd/demomode_en 1
+    write /proc/mtk_battery_cmd/demomode_max_soc 70
+    write /proc/mtk_battery_cmd/demomode_min_soc 50
+    #hao.zhang add hbm path permission
+    chown system system /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/backlight_hbm
+    chmod 0666 /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/backlight_hbm

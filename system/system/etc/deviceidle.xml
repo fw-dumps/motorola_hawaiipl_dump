@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <!-- package of whitelist app,per package a line -->
+    <wl n="com.tencent.mm"/>
+    <wl n="com.whatsapp"/>
+</config>

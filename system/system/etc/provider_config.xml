@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+	<setting type="global" name="auto_time" value="1"/>
+	<setting type="global" name="auto_time_zone" value="1"/>
+	<setting type="system" name="screen_off_timeout" value="60000"/>
+	<setting type="system" name="accelerometer_rotation" value="0"/>
+	<setting type="system" name="screen_brightness_mode" value="1"/>
+	<setting type="secure" name="camera_double_tap_power_gesture_disabled" value="0"/>
+	<setting type="secure" name="doze_enabled" value="1"/>
+	<setting type="secure" name="doze_pulse_on_pick_up" value="0"/>
+	<setting type="secure" name="screensaver_enabled" value="1"/>
+	<setting type="system" name="sound_effects_enabled" value="0"/>
+	<setting type="secure" name="camera_double_twist_open_enabled" value="1"/>
+	<setting type="system" name="peak_refresh_rate" value="90f"/>
+	<setting type="secure" name="chop_chop_enabled" value="2"/>
+	<setting type="system" name="key_disabled_swipe" value="1"/>
+	<setting type="secure" name="emergency_gesture_sound_enabled" value="1"/>
+	<setting type="global" name="animator_duration_scale" value="1.0"/>
+	<setting type="global" name="transition_animation_scale" value="1.0"/>
+	<setting type="global" name="window_animation_scale" value="1.0"/>
+</resources>

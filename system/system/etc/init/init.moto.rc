@@ -1,0 +1,60 @@
+#on early-fs
+#   mkdir /mnt/vendor/resources 0777 system system
+
+#CJ: moto requirement, PMS need this to do some customization for facebook
+on property:persist.app.facebook.partnerid=*   
+   write /data/local/prop/persist.app.facebook.partnerid ${persist.app.facebook.partnerid}
+
+on post-fs-data
+   #CJ: use for tell app some prop is changed
+   mkdir /data/local/prop/ 0666 system system
+   
+   #fenghui.zou add for sync file /data/misc/elabel/regulatory_info.png
+   mkdir /data/misc/elabel/
+   sync_file /dev/block/platform/bootdevice/by-name/elabel /data/misc/elabel/regulatory_info.png
+   chown system system /data/misc/elabel/regulatory_info.png
+   chmod 0664 /data/misc/elabel/regulatory_info.png
+
+
+# liujia, EKHAWAIP-770, 2021-10-19, sta
+on property:ro.boot.product.hardware.sku=ss
+    setprop persist.radio.multisim.config ss
+
+on property:ro.boot.product.hardware.sku=dsds
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.product.hardware.sku=nfc_ss
+    setprop persist.radio.multisim.config ss
+
+on property:ro.boot.product.hardware.sku=nfc_dsds
+    setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.product.hardware.sku=nonfc_ss
+    setprop persist.radio.multisim.config ss
+
+on property:ro.boot.product.hardware.sku=nonfc_dsds
+    setprop persist.radio.multisim.config dsds
+# liujia, EKHAWAIP-770, 2021-10-19, end
+
+# zeshuai.rong, PEBAAE-15, 2021-10-25, start
+   chown system system /sys/devices/platform/ant_det/driver/ant_det/gpio_level
+   chmod 0666 /sys/devices/platform/ant_det/driver/ant_det/gpio_level
+# zeshuai.rong, PEBAAE-15, 2021-10-25, end
+
+# zeshuai.rong, PEBAAE-1356, 2021-12-24, start
+   chown system system /sys/class/thermal/thermal_zone11/temp
+   chmod 0666 /sys/class/thermal/thermal_zone11/temp
+# zeshuai.rong, PEBAAE-1356, 2021-12-24, end
+
+#on post-fs-data
+   #CJ: Lazy method
+#   setprop ro.pt.Model_number ${ro.product.model}
+#   setprop ro.pt.BT_name ${ro.product.model}
+#   setprop ro.pt.Wifi_hotspot_name ${ro.product.model}
+#   setprop ro.pt.wifi_direct_name ${ro.product.model}
+#   setprop ro.pt.mtp_pc_name ${ro.product.model}
+#   setprop ro.pt.product_name ${ro.product.model}
+#   setprop ro.pt.mtp_name ${ro.product.model}
+#   setprop ro.pt.usb.manufacturer ${ro.product.model}
+#   setprop ro.pt.usb.product ${ro.product.model}
+#   setprop ro.pt.mtp.print.model ${ro.product.model}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This XML file declares which signature|privileged permissions should be granted to privileged
+applications that come with the motorola launcher
+-->
+<permissions>
+    <privapp-permissions package="com.ape.setupwizard">
+        <permission name="android.permission.CHANGE_CONFIGURATION"/>
+		<permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+		<permission name="android.permission.WRITE_APN_SETTINGS"/>
+		<permission name="android.permission.STATUS_BAR"/>
+		<permission name="android.permission.INTERACT_ACROSS_USERS"/>
+		<permission name="android.permission.MODIFY_PHONE_STATE"/>
+		<permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS"/>
+        <permission name="android.permission.MANAGE_DEVICE_ADMINS"/>
+		<permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+		<permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+		<permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+		<permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>

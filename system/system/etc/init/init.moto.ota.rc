@@ -1,0 +1,3 @@
+on post-fs-data
+    #CJ:MOTO_GENERAL_FEATURE_OTA
+    mkdir /data/misc_ne 0770 system cache

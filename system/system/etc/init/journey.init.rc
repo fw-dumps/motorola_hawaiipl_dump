@@ -1,0 +1,78 @@
+on property:ro.board.platform=mt6765
+    setprop dalvik.vm.dex2oat-threads 8
+
+on property:ro.board.platform=mt6761
+    setprop dalvik.vm.dex2oat-threads 2
+
+on property:ro.board.platform=ums512
+    setprop dalvik.vm.dex2oat-threads 6
+
+#on property:sys.boot_completed=1
+#    setprop dalvik.vm.dex2oat-threads 4
+
+on post-fs-data
+    chown root system /mnt/journey/persist
+    chmod 0775 /mnt/journey/persist
+    restorecon_recursive /mnt/journey/persist
+
+on boot
+   # Bind mount of a persist partition
+   mkdir /mnt/journey/persist/misc 0775 system system
+   mkdir /mnt/persist 0775 system system
+   mkdir /mnt/persist/misc 0775 system system
+   mount none /mnt/journey/persist/misc /mnt/persist/misc bind
+   # fenghui.zou add for /mnt/vendor/persist/msic
+   mkdir /mnt/vendor/persist/misc 0775 system system
+   mount none /mnt/journey/persist/misc /mnt/vendor/persist/misc bind
+   restorecon_recursive /mnt/vendor/persist/misc
+
+on property:config.write.zero=*
+   write ${config.write.zero} 0
+
+on property:config.write.one=*
+   write ${config.write.one} 1
+
+on property:persist.config.write.zero=*
+   setprop config.write.zero ${persist.config.write.zero}
+
+on property:persist.config.write.one=*
+   setprop config.write.one ${persist.config.write.one}
+
+on init
+    mkdir /mnt/journey 0775 root system
+    mkdir /mnt/journey/persist 0775 root system
+    restorecon_recursive /mnt/journey/persist
+    #hao.zhang add hbm path permission
+    chown system system /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/backlight_hbm
+    chmod 0666 /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/backlight_hbm
+    
+on boot
+#for journey_root mode start
+   chown shell system /dev/usb-ffs
+   chmod 775 /dev/usb-ffs
+   chown shell system /dev/usb-ffs/adb
+   chmod 770 /dev/usb-ffs/adb
+   chown shell system /dev/usb-ffs/adb/ep0
+   chmod 660 /dev/usb-ffs/adb/ep0
+   chmod 0775 /mnt/persist/misc/FTM_APP
+   chmod 0775 /mnt/persist/misc/FTM_APP/FTM_report
+
+on property:service.adb.journey.root=*
+   chown shell system /dev/usb-ffs/adb/ep1
+   chmod 660 /dev/usb-ffs/adb/ep1
+   chown shell system /dev/usb-ffs/adb/ep2
+   chmod 660 /dev/usb-ffs/adb/ep2
+#for journey_root mode end
+    
+#fenghui.zou add for get firstboot status,use ro.journey.status.firstboot=true
+on property:persist.journey.status.boot=1
+   setprop persist.journey.status.boot 0
+   setprop ro.journey.status.firstboot true
+
+#weihui.pang,PDFCCE-335
+on init && property:ro.boot.carrier=retru
+   setprop persist.sys.locale ru-RU
+
+#daming.cao,cqa nfc item test is support
+on property:ro.boot.hardware.sku=XT2128-2
+   setprop ro.vendor.hw.nfc true

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+    <!-- test feature configs-->
+    <setting type="config" name="keys_MENU_HOME_BACK_BACKTOUCH_SUGAR" value="0,0,0,0,0"/> <!--Keys: if the key is support, set to "1",else "0"-->
+    <setting type="config" name="TP" value="0"/>                               <!--TouchPanel: "0", "1", "2" means 3 ways to test-->
+    <setting type="config" name="no_front_flash" value="1"/>                   <!--LED-->
+    <setting type="config" name="Mic_2" value="0"/>                            <!--MicRecorder-->
+    <setting type="config" name="MainMic_tc" value="3"/>                     <!--MicRecorder MainMic_tc-->
+    <setting type="config" name="SubMic_tc" value="4"/>                      <!--MicRecorder SubMic_tc-->
+    <setting type="config" name="Earphone_tc" value="5"/>                    <!--MicRecorder Earphone_tc-->
+    <setting type="config" name="callTest_number" value="10000"/>
+    <!-- 双摄标定菜单测试项 -->
+    <setting type="config" name="camfaccalibration" value="0"/>
+    <!-- 展讯平台的，camera的光学变焦标定 -->
+    <setting type="config" name="zoom_calibration_support" value="0"/>
+    <setting type="config" name="Show_MEID" value="0"/>
+    <!-- 个是控制，pass菜单，不依赖sd的状态 -->
+    <setting type="config" name="Skip_SD_check" value="0"/>
+    <!-- 这个是不需要显示sd的状态 -->
+    <setting type="config" name="SD_Test_Support" value="0"/>
+
+    <!-- camera摄像头的配置，如果双摄，第二个摄像头的测试项：Camera2Activity 三摄的是：Camera3Activity-->
+    <setting type="item" name="com.ape.factory.testview.common.Camera" value="1"/>
+    <setting type="item" name="com.ape.factory.camera2.Camera2Activity" value="1"/>
+    <setting type="item" name="com.ape.factory.camera2.Camera3Activity" value="1"/>
+    <setting type="item" name="com.ape.factory.camera2.Camera4Activity" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.CallTest" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.SIMDetect" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Keys" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Version" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Fingerprint" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.MemoryCard" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.LED" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.HALL" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.SmartPA" value="0"/>
+    <setting type="item" name="com.ape.factory.testview.common.SmartF0PACali" value="0"/>
+    <setting type="item" name="com.ape.factory.testview.common.MicRecorder" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.FMRadio" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.OTG" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Battery" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.TouchPanel" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.LCDcolor" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.LCDcontrast" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Speaker" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.Receiver" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.VibratorTest" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.mtk.AlspsMtk" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.mtk.GyroscopeMtk" value="0"/>
+    <setting type="item" name="com.ape.factory.testview.common.MSensor" value="0"/>
+    <setting type="item" name="com.ape.factory.testview.mtk.GSensorMtk" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.SarSensor" value="0"/>
+    <setting type="item" name="com.ape.factory.testview.common.Nfc" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.mtk.GPSMtk" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.WiFiList" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.BluetoothList" value="1"/>
+    <setting type="item" name="com.ape.factory.testview.common.SetWallpaperActivity" value="0"/>
+
+</resources>
