@@ -1,0 +1,514 @@
+#daming.cao,PBGAM-228,config clientid
+on property:persist.sys.channel_id=amxbr
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+# TINNO BEGIN
+# Add by chongxin.cheng for PBGAM-1411 with FAQ19818
+on property:ro.boot.carrier=amxmx
+   setprop persist.vendor.radio.fd.on.only.r8 1
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+on property:ro.boot.carrier=attmx
+   setprop persist.vendor.radio.fd.on.only.r8 1
+
+on property:ro.boot.carrier=tefmx
+   setprop persist.vendor.radio.fd.on.only.r8 1
+# TINNO END.
+
+# TINNO BEGIN
+# Add by chongxin.cheng for PBGAM-1972
+on property:ro.boot.carrier=amxmx
+   setprop ro.feature.telcellclearcode true
+
+# TINNO END.
+
+# TINNO BEGIN
+# Add by chongxin.cheng for PBGAM-2469
+on property:ro.boot.carrier=tigco
+   setprop persist.vendor.data.not.val true
+# TINNO END.
+
+on property:ro.boot.carrier=amxco
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+on property:ro.boot.carrier=amxar
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+   setprop ro.com.google.clientidbase.cr android-americamovil-{country}-revc
+
+#wangying add for amazon PDFCCE-473
+on property:ro.boot.carrier=attmx
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-attmexico-mx-rvc3
+   setprop ro.com.google.clientidbase.vs android-attmexico-mx-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   setprop ro.csc.amazon.partnerid att
+
+on property:ro.boot.carrier=amxpe
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+on property:ro.boot.carrier=amxcl
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+on property:ro.boot.carrier=amxla
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-americamovil-{country}-revc
+   setprop ro.com.google.clientidbase.am android-americamovil-{country}
+
+on property:ro.boot.carrier=eegb
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+on property:ro.boot.carrier=dteu
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-dt-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-dt-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tmobile-{country}
+
+#daming.cao,PBGAM-4072 gang.an,timit amazon
+on property:ro.boot.carrier=timit
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.am ""
+   setprop ro.com.google.clientidbase.ms android-tim-it-rvc3
+   setprop ro.com.google.clientidbase.vs android-tim-it-rvc3
+   setprop ro.csc.amazon.partnerid timit
+   
+on property:persist.sys.channel_id=timbr
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.am ""
+   setprop ro.com.google.clientidbase.ms android-tim-br-revc
+   setprop ro.com.google.clientidbase.vs android-tim-br-revc
+
+#wangying add for EKHAWAIPG-5258 start
+on property:ro.boot.carrier=o2de
+    setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.am android-tef-{country}
+
+on property:ro.boot.carrier=o2gb
+    setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.am android-tef-{country}
+
+on property:ro.boot.carrier=tefes
+    setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+    setprop ro.com.google.clientidbase.am android-tef-{country}
+#wangying add for EKHAWAIPG-5258 end
+
+#weihui.pang Add for Vodafone ClientID
+on property:gsm.sim.operator.numeric=21401
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+on property:gsm.sim.operator.numeric=,21401
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+   
+on property:gsm.sim.operator.numeric=26202
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+on property:gsm.sim.operator.numeric=,26202
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+   
+on property:gsm.sim.operator.numeric=26204
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+on property:gsm.sim.operator.numeric=,26204
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+   
+on property:gsm.sim.operator.numeric=23003
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+on property:gsm.sim.operator.numeric=,23003
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+   
+on property:gsm.sim.operator.numeric=26209
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+on property:gsm.sim.operator.numeric=,26209
+   setprop ro.com.google.clientidbase.ms android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-vf-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-vf-{country}
+   
+#weihui.pang Add for EE ClientID
+on property:gsm.sim.operator.numeric=23430
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23430
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+      
+on property:gsm.sim.operator.numeric=23433
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23433
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=23438
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23438
+   setprop ro.com.google.clientidbase.ms android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.vs android-ee-uk-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+#weihui.pang Add for Telefonica ClientID
+on property:gsm.sim.operator.numeric=23410
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,23410
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+on property:gsm.sim.operator.numeric=21405
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,21405
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+on property:gsm.sim.operator.numeric=21407
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,21407
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+on property:gsm.sim.operator.numeric=26203
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,26203
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+on property:gsm.sim.operator.numeric=26207
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,26207
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+on property:gsm.sim.operator.numeric=26211
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+on property:gsm.sim.operator.numeric=,26211
+   setprop ro.com.google.clientidbase.ms android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-tef-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-tef-{country}
+   
+#weihui.pang Add for Orange ClientID
+on property:gsm.sim.operator.numeric=20801
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,20801
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=22610
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,22610
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=21403
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,21403
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=21421
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,21421
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=21419
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,21419
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+
+on property:gsm.sim.operator.numeric=26003
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,26003
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=20610
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,20610
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=23101
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,23101
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+on property:gsm.sim.operator.numeric=27099
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+on property:gsm.sim.operator.numeric=,27099
+   setprop ro.com.google.clientidbase.ms android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-orange-{country}-rvc3
+   setprop ro.com.google.clientidbase.am android-orange-{country}
+   
+#weihui.pang Add for H3G ClientID
+on property:gsm.sim.operator.numeric=23420
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23420
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+on property:gsm.sim.operator.numeric=23594
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23594
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=27202
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,27202
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=27205
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,27205
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+on property:gsm.sim.operator.numeric=27217
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,27217
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+on property:gsm.sim.operator.numeric=24002
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24002
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+on property:gsm.sim.operator.numeric=24004
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24004
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=23806
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23806
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.am ""
+   
+#weihui.pang Add for TIM ClientID
+#on property:gsm.sim.operator.numeric=22201
+#   setprop ro.com.google.clientidbase.ms android-tim-it-revc
+#   setprop ro.com.google.clientidbase.vs android-tim-it-revc
+#   setprop ro.com.google.clientidbase.am ""
+#on property:gsm.sim.operator.numeric=,22201
+#   setprop ro.com.google.clientidbase.ms android-tim-it-revc
+#   setprop ro.com.google.clientidbase.vs android-tim-it-revc
+#   setprop ro.com.google.clientidbase.am ""
+   
+#weihui.pang Add for Bouygues ClientID
+on property:gsm.sim.operator.numeric=20820
+   setprop ro.com.google.clientidbase.ms android-bouygues-fr-rvc3
+   setprop ro.com.google.clientidbase.vs android-bouygues-fr-rvc3
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,20820
+   setprop ro.com.google.clientidbase.ms android-bouygues-fr-rvc3
+   setprop ro.com.google.clientidbase.vs android-bouygues-fr-rvc3
+   setprop ro.com.google.clientidbase.am ""
+
+#weihui.pang Add for Telenor ClientID
+on property:gsm.sim.operator.numeric=24006
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24006
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+
+on property:gsm.sim.operator.numeric=24008
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24008
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=24201
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24201
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=24212
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,24212
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=23802
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23802
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+   
+on property:gsm.sim.operator.numeric=23877
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+on property:gsm.sim.operator.numeric=,23877
+   setprop ro.com.google.clientidbase.ms android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.vs android-telenor-{country}-revc
+   setprop ro.com.google.clientidbase.am ""
+
+#weihui.pang Add for Beeline ClientID
+on property:gsm.sim.operator.numeric=25099
+   setprop ro.com.google.clientidbase.ms ""
+   setprop ro.com.google.clientidbase.vs ""
+   setprop ro.com.google.clientidbase.am android-vimpelcom-ru
+on property:gsm.sim.operator.numeric=,25099
+   setprop ro.com.google.clientidbase.ms ""
+   setprop ro.com.google.clientidbase.vs ""
+   setprop ro.com.google.clientidbase.am android-vimpelcom-ru
+
+#wangying,PDFCCE-326 wangying,windit amazon
+on property:ro.boot.carrier=windit
+   setprop ro.csc.amazon.partnerid 3it
+   setprop ro.com.google.clientidbase.ms android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.vs android-h3g-{country}-rvc3
+   setprop ro.com.google.clientidbase.cr android-motorola
+   setprop ro.com.google.clientidbase.am ""
+
+#wangying add for EKJAVA-190
+on property:ro.boot.carrier=vfau
+   setprop ro.csc.amazon.partnerid vfau
+
+# must be last one for the default setting
+on property:ro.vendor.clientid.default=true
+   setprop ro.com.google.clientidbase android-motorola
+   setprop ro.com.google.clientidbase.ms android-motorola-rvo3
+   setprop ro.com.google.clientidbase.vs android-motorola-rvo3
+
+# dongwei.lv add for PDFCCE-653
+on property:ro.carrier=*
+   setprop ro.oem.key1 ${ro.carrier}
+
+on property:ro.product.lenovo_version=true
+        setprop ro.product.white_label true
+        
+on property:ro.pt.lenovo_version=true
+        setprop ro.product.white_label true

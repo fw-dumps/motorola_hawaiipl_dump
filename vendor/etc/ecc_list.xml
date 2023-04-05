@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EccTable>
+    <!--
+        Configure emergency numbers for open market load. For the emergey numbers defined in
+        3GPP TS 22.101 (112/911 when SIM/USIM present and 112/911/000/08/110/118/119/999
+        when SIM/USIM not present) it will be configure in default emergency number source,
+        so no need to configure here if there is no special request for these numbers.
+
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category (From 3GPP TS24.008)
+            - Bit 1 (1): Police
+            - Bit 2 (2): Ambulance
+            - Bit 3 (4): Fire Brigade
+            - Bit 4 (8): Marine Guard
+            - Bit 5 (16): Mountain Rescue
+            - Bit 6 (32): Manually initiated eCall
+            - Bit 7 (64): Automatically initiated eCall
+            - Bit 8 (128): is spare and set to "0"
+        - Condition: there are following values:
+            - 0: ecc only when no sim
+            - 1: ecc always
+            - 2: MMI will show ecc but send to nw as normal call
+        - Plmn: Operator PLMN which contains MCC+MNC.
+                Use FFF or FF for all operators under same country
+                Ex: 460 FFF means all operators in China
+    -->
+
+    <!-- Add for Vodafone/Ireland operators -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="272 01"/>
+
+    <!-- Add for Myanmar due to AOSP eccdata will treat it as ecc -->
+    <EccEntry Ecc="191" Category="0" Condition="2" Plmn="414 FFF"/>
+    <EccEntry Ecc="192" Category="0" Condition="2" Plmn="414 FFF"/>
+    <EccEntry Ecc="199" Category="0" Condition="2" Plmn="414 FFF"/>
+
+    <!-- Add for Japan KDDI operator -->
+    <!-- zhanghao, EKHAWAIP-3424, 2022-5-6 -->
+    <!--
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 07"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 07"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 07"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 07"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 07"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 07"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 08"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 08"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 08"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 08"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 08"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 08"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 50"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 50"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 50"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 50"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 50"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 50"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 51"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 51"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 51"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 51"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 51"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 51"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 52"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 52"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 52"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 52"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 52"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 52"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 53"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 53"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 53"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 53"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 53"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 53"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 54"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 54"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 54"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 54"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 54"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 54"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 55"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 55"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 55"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 55"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 55"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 55"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 56"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 56"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 56"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 56"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 56"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 56"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 70"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 70"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 70"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 70"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 70"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 70"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 71"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 71"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 71"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 71"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 71"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 71"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 72"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 72"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 72"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 72"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 72"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 72"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 73"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 73"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 73"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 73"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 73"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 73"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 74"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 74"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 74"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 74"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 74"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 74"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 75"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 75"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 75"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 75"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 75"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 75"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 76"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 76"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 76"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 76"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 76"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 76"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 77"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 77"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 77"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 77"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 77"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 77"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 78"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 78"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 78"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 78"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 78"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 78"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 79"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 79"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 79"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 79"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 79"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 79"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 80"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 80"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 80"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 80"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 80"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 80"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 81"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 81"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 81"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 81"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 81"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 81"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 82"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 82"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 82"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 82"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 82"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 82"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 83"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 83"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 83"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 83"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 83"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 83"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 84"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 84"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 84"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 84"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 84"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 84"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 85"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 85"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 85"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 85"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 85"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 85"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 86"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 86"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 86"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 86"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 86"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 86"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 88"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 88"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 88"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 88"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 88"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 88"/>
+
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn="440 89"/>
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn="440 89"/>
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn="440 89"/>
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn="440 89"/>
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn="440 89"/>
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn="440 89"/>
+    -->
+
+    <!-- Add for Japan operator due to AOSP don't set correct category -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="440 FFF"/>
+    <EccEntry Ecc="118" Category="8" Condition="1" Plmn="440 FFF"/>
+    <EccEntry Ecc="119" Category="6" Condition="1" Plmn="440 FFF"/>
+
+    <!-- Add for Korea operator -->
+    <EccEntry Ecc="111" Category="6" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="113" Category="3" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="117" Category="18" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="118" Category="19" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="125" Category="9" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="911" Category="4" Condition="1" Plmn="450 FFF"/>
+    <EccEntry Ecc="122" Category="8" Condition="1" Plmn="450 FFF"/>
+
+    <!-- Add for Vietnam due to AOSP eccdata will treat it as ecc -->
+    <EccEntry Ecc="113" Category="0" Condition="2" Plmn="452 FFF"/>
+    <EccEntry Ecc="114" Category="0" Condition="2" Plmn="452 FFF"/>
+    <EccEntry Ecc="115" Category="0" Condition="2" Plmn="452 FFF"/>
+
+    <!-- Add 999 for HongKong -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="454 FFF"/>
+
+    <!-- Add for CT 2/3G network -->
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="460 03"/>
+    <EccEntry Ecc="119" Category="0" Condition="1" Plmn="460 03"/>
+    <EccEntry Ecc="120" Category="0" Condition="1" Plmn="460 03"/>
+    <EccEntry Ecc="122" Category="0" Condition="1" Plmn="460 03"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="460 03"/>
+
+    <!-- Add for CT VOLTE requirement -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="460 11"/>
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn="460 11"/>
+    <EccEntry Ecc="120" Category="2" Condition="1" Plmn="460 11"/>
+    <EccEntry Ecc="122" Category="8" Condition="1" Plmn="460 11"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="460 11"/>
+
+    <!-- China CTA emergency numbers for GSM operators -->
+    <EccEntry Ecc="110" Category="0" Condition="2" Plmn="460 FFF"/>
+    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="460 FFF"/>
+    <EccEntry Ecc="120" Category="0" Condition="2" Plmn="460 FFF"/>
+    <EccEntry Ecc="122" Category="0" Condition="2" Plmn="460 FFF"/>
+    <!-- Support dial 999 under G+N/A case because CT network don't support
+         dial 999 without no CT SIM
+    -->
+    <EccEntry Ecc="999" Category="0" Condition="2" Plmn="460 FFF"/>
+
+    <!-- Add for Taiwan FET operator (466 01) -->
+    <EccEntry Ecc="110" Category="1" Condition="2" Plmn="466 01"/>
+    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="466 01"/>
+    <EccEntry Ecc="119" Category="4" Condition="2" Plmn="466 01"/>
+    <EccEntry Ecc="911" Category="2" Condition="1" Plmn="466 01"/>
+
+    <!-- Add for Taiwan APTG operator (466 05) -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="466 05"/>
+    <EccEntry Ecc="112" Category="4" Condition="1" Plmn="466 05"/>
+    <EccEntry Ecc="119" Category="2" Condition="1" Plmn="466 05"/>
+
+    <!-- Add for Taiwan T star operator (466 89) -->
+    <EccEntry Ecc="110" Category="0" Condition="2" Plmn="466 89"/>
+    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="466 89"/>
+
+    <!-- Add for Taiwan CHT operator (466 92) -->
+    <EccEntry Ecc="110" Category="0" Condition="2" Plmn="466 92"/>
+    <EccEntry Ecc="119" Category="0" Condition="2" Plmn="466 92"/>
+
+    <!-- Add for Taiwan TWM operator (466 93/97/99) -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="466 93"/>
+    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="466 93"/>
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn="466 93"/>
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="466 97"/>
+    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="466 97"/>
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn="466 97"/>
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn="466 99"/>
+    <EccEntry Ecc="112" Category="2" Condition="1" Plmn="466 99"/>
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn="466 99"/>
+
+    <!-- Add for Malaysis Digi operator -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="502 FFF"/>
+
+    <!-- Fix NO SIM ECC call end delay issue -->
+    <EccEntry Ecc="000" Category="31" Condition="1" Plmn="505 01"/>
+    <!-- Add for All Australia operators -->
+    <EccEntry Ecc="000" Category="0" Condition="1" Plmn="505 FFF"/>
+
+    <!-- Add for Thailand TrueMove operator (520 00/04) -->
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn="520 00"/>
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn="520 00"/>
+    <EccEntry Ecc="911" Category="1" Condition="1" Plmn="520 00"/>
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn="520 00"/>
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn="520 00"/>
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn="520 04"/>
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn="520 04"/>
+    <EccEntry Ecc="911" Category="1" Condition="1" Plmn="520 04"/>
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn="520 04"/>
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn="520 04"/>
+
+    <!-- Add for Thailand DTAC due to AOSP eccdata will treat it as ecc -->
+    <EccEntry Ecc="191" Category="0" Condition="2" Plmn="520 05"/>
+    <EccEntry Ecc="191" Category="0" Condition="2" Plmn="520 18"/>
+    <EccEntry Ecc="191" Category="0" Condition="2" Plmn="520 47"/>
+
+    <!-- Add for Avantel/Colombia operator -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 130"/>
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 360"/>
+
+    <!--add for EKHAWAIP-330 by gang.pan 20211019 start -->
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 05"/>
+    <!--Claro CL -->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 03"/>
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 23"/>
+    <EccEntry Ecc="101" Category="0" Condition="1" Plmn="740 01"/>
+    <!--Claro HN -->
+    <EccEntry Ecc="100" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="111" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="113" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="116" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="195" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="198" Category="0" Condition="1" Plmn="708 001"/>
+    <EccEntry Ecc="199" Category="0" Condition="1" Plmn="708 001"/>
+    <!--Claro NI -->
+    <EccEntry Ecc="115" Category="0" Condition="1" Plmn="710 21"/>
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="710 21"/>
+    <EccEntry Ecc="128" Category="0" Condition="1" Plmn="710 21"/>
+    <EccEntry Ecc="115" Category="0" Condition="1" Plmn="710 73"/>
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="710 73"/>
+    <EccEntry Ecc="128" Category="0" Condition="1" Plmn="710 73"/>
+    <!--Claro PA -->
+    <EccEntry Ecc="103" Category="0" Condition="1" Plmn="714 03"/>
+    <EccEntry Ecc="104" Category="0" Condition="1" Plmn="714 03"/>
+    <!--Claro PE -->
+    <EccEntry Ecc="105" Category="0" Condition="1" Plmn="716 10"/>
+    <!--Claro SV -->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="706 01"/>
+    <EccEntry Ecc="122" Category="0" Condition="1" Plmn="706 01"/>
+    <!--Vivo. BR -->
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 06"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 10"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 11"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 23"/>
+    <!--Mov. CL -->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 02"/>
+    <!--Mov. CO -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 12"/>
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 123"/>
+    <!--Mov. EC -->
+    <!-- zhanghao, EKHAWAIPG-3408, 2022-1-14 -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="740 00"/>
+    <!--Mov. PE -->
+    <EccEntry Ecc="105" Category="0" Condition="1" Plmn="716 06"/>
+    <!--Nextel BR -->
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 39"/>
+    <!--Oi BR -->
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 16"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 24"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 31"/>
+    <!--TIM BR -->
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 02"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 03"/>
+    <EccEntry Ecc="190" Category="0" Condition="1" Plmn="724 04"/>
+    <!--Entel CL -->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 01"/>
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 10"/>
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 24"/>
+    <!--WOM CL	-->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 09"/>
+    <!--Avantel CO -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 130"/>
+    <!--ETB CO -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 187"/>
+    <!--Tigo CO -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 103"/>
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 111"/>
+    <!--WOM CO -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn="732 360"/>
+    <!--add for EKHAWAIP-330 by gang.pan 20211019 end -->
+
+    <!--add for EKHAWAIP-696 by gang.pan 20211019 start -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="234 15"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="272 01"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="234 30"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="234 33"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="234 38"/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="234 10"/>
+    <!-- zhanghao, EKHAWAIP-3221, 2022-4-13, start -->
+    <!--
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="262 03"/>
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="262 07"/>
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn="262 11"/>
+    -->
+    <!-- zhanghao, EKHAWAIP-3221, 2022-4-13, end -->
+    <EccEntry Ecc="117" Category="0" Condition="1" Plmn="228 01"/>
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn="228 01"/>
+    <EccEntry Ecc="143" Category="0" Condition="1" Plmn="228 01"/>
+    <EccEntry Ecc="144" Category="0" Condition="1" Plmn="228 01"/>
+    <EccEntry Ecc="145" Category="0" Condition="1" Plmn="228 01"/>
+    <EccEntry Ecc="147" Category="0" Condition="1" Plmn="228 01"/>
+    <!--add for EKHAWAIP-696 by gang.pan 20211019 end -->
+
+    <!-- zhanghao, EKHAWAIP-1235, 2021-11-2, start -->
+    <EccEntry Ecc="110" Category="4" Condition="1" Plmn="242 02"/>
+    <EccEntry Ecc="113" Category="2" Condition="1" Plmn="242 02"/>
+    <EccEntry Ecc="110" Category="4" Condition="1" Plmn="242 05"/>
+    <EccEntry Ecc="113" Category="2" Condition="1" Plmn="242 05"/>
+
+    <EccEntry Ecc="101" Category="1" Condition="1" Plmn="246 01"/>
+    <EccEntry Ecc="102" Category="1" Condition="1" Plmn="246 01"/>
+    <EccEntry Ecc="103" Category="1" Condition="1" Plmn="246 01"/>
+    <EccEntry Ecc="033" Category="1" Condition="1" Plmn="246 01"/>
+    <EccEntry Ecc="133" Category="1" Condition="1" Plmn="246 01"/>
+    <!-- zhanghao, EKHAWAIP-1235, 2021-11-2, end -->
+
+    <!-- zhanghao, EKHAWAIPG-1377, 2021-12-11 -->
+    <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "424 FFF" />
+    <EccEntry Ecc="999" Category="0" Condition="2" Plmn = "424 FFF" />
+
+    <!-- zhanghao, EKHAWAIPG-1244, 2021-12-15 -->
+    <EccEntry Ecc="150" Category="0" Condition="2" Plmn = "230 FF"/>
+    <EccEntry Ecc="155" Category="0" Condition="2" Plmn = "230 FF"/>
+    <EccEntry Ecc="158" Category="0" Condition="2" Plmn = "230 FF"/>
+    <EccEntry Ecc="156" Category="0" Condition="2" Plmn = "230 FF"/>
+
+    <!-- zhanghao, EKHAWAIPG-4221, 2022-2-8 -->
+    <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "260 FFF" />
+    <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "260 FFF" />
+
+    <!-- xuepeng, EKHAWAIPG-3471, 2022-2-21 -->
+    <EccEntry Ecc="190" Category="0" Condition="2" Plmn = "605 01" />
+
+    <!-- zhanghao, EKHAWAIP-2431, 2022-3-3 -->
+    <EccEntry Ecc="115" Category="0" Condition="1" Plmn = "418 FF" />
+    <EccEntry Ecc="125" Category="0" Condition="1" Plmn = "418 FF" />
+
+    <!-- zhanghao, EKHAWAIP-3512, 2022-5-5 -->
+    <EccEntry Ecc="100" Category="0" Condition="1" Plmn = "206 01" />
+
+    <!-- zhanghao, EKHAWAIPG-6215, 2022-6-5 -->
+    <!-- Claro Colombia -->
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn = "732 101" />
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "732 101" />
+</EccTable>

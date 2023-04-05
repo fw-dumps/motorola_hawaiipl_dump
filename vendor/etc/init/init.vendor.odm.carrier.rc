@@ -1,0 +1,5 @@
+# must be last one for the default setting
+#on property:ro.boot.carrier=*
+#   setprop ro.com.google.clientidbase android-motorola
+#   setprop ro.com.google.clientidbase.ms android-motorola-rev2
+#   setprop ro.com.google.clientidbase.am android-motorola

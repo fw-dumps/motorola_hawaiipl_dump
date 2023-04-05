@@ -1,0 +1,3 @@
+on boot
+   chmod 0777 /dev/esfp0
+   chown system system /dev/esfp0

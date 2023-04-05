@@ -1,0 +1,7 @@
+service scc /vendor/bin/scc
+    class main
+    user root
+    group root system input wakelock
+
+on charger
+    start scc

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <!-- in hours -->
+    <UpdateFrequency value="24" />
+
+    <!-- should be same with version.txt -->
+    <version value="42" />
+    
+    <!-- preload -->
+    <package label="preload"
+        behavior="PRELOAD,"
+        names="com.android.dialer,"
+        area="SUGAR_CN,SUGAR_TW,SUGAR_HK,"
+    />    
+    
+    <!-- im -->
+    <package label="webchat"
+        behavior="ALLOW_PERSIST,PRELOAD,"
+        names="com.tencent.mm,"
+        area="SUGAR_CN,"
+    />
+
+    <package label="easymode1"
+        behavior="ALLOW_PERSIST,"
+        names="com.ape.easymode1,"
+    />
+
+    <package label="wiline2"
+        behavior="ALLOW_PERSIST,"
+        names="com.wiko.wiline2,"
+    />
+
+    <package label="webchat"
+        behavior="ALLOW_PERSIST,"
+        names="com.tencent.mm,"
+    />
+
+    <package label="qq"
+        behavior="ALLOW_PERSIST,"
+        names="com.tencent.mobileqq,"
+    />
+
+    <package label="facebook"
+        behavior="ALLOW_PERSIST,"
+        names="com.facebook.orca,com.facebook.katana,com.facebook.lite,"
+    />
+    <package label="skype"
+        behavior="ALLOW_PERSIST,"
+        names="com.skype.rover,com.skype.raider,com.skype.polaris,"
+    />
+
+    <package label="whatsapp"
+        behavior="ALLOW_PERSIST,"
+        names="com.whatsapp,"
+    />
+
+    <package label="twitter"
+        behavior="ALLOW_PERSIST,"
+        names="com.twitter.android,"
+    />
+
+    <package label="dmagent"
+        behavior="ALLOW_PERSIST,"
+        names="com.google.android.apps.enterprise.dmagent,"
+    />
+
+    <package label="instagram"
+        behavior="ALLOW_PERSIST,"
+        names="com.instagram.android,"
+    />
+
+    <package label="hangout"
+        behavior="ALLOW_PERSIST,"
+        names="com.google.android.talk,"
+    />
+    
+    <package label="telegram"
+        behavior="ALLOW_PERSIST,"
+        names="org.telegram.messenger,"
+    />
+
+    <package label="imoim"
+        behavior="ALLOW_PERSIST,"
+        names="com.imo.android.imoim,"
+    />
+
+    <package label="sport"
+        behavior="ALLOW_PERSIST,"
+        names="com.huawei.health,com.huawei.hwid,"
+    />
+
+    <package label="viber"
+        behavior="ALLOW_PERSIST,"
+        names="com.viber.voip,"
+    />
+
+    <package label="demogame"
+        behavior="ALLOW_PERSIST,"
+        names="com.smartviser.demogame,"
+    />
+
+    <package label="lunarlabs"
+        behavior="ALLOW_PERSIST,"
+        names="com.lunarlabs.panda,"
+    />
+
+    <!-- email -->
+    <package label="email"
+        behavior="ALLOW_PERSIST,"
+        names="me.bluemail.mail,com.microsoft.office.outlook,com.tohsoft.mail.email.emailclient,"
+        area="WIKO_FR,"
+    />
+    
+    <!-- google app -->
+    <package label="google app"
+        behavior="ALLOW_PERSIST,"
+        names="com.google.android.apps.cloudprint,"
+    />
+        
+    <!-- myos -->
+    <package label="myos"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.sugar.note,com.ape.weather3,com.ape.weatherlive,com.ape.apetrialfeedback,com.ape.weathergo,com.ape.qhb,"
+    />
+    
+    <package label="speechassist"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.myos.speechassist,com.iflytek.speechsuite,"
+    />
+    
+    <package label="appsstore"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.myos.appsstore,com.ape.ufogames,"
+    />
+
+    <package label="myseneschal"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.ape.myseneschal,com.myos.myseneschal,com.ape.smartassist,com.ape.cleanassist,"
+    />
+
+    <!-- system app not in system for cta -->
+    <package label="cta"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.android.email.provider,com.android.email,com.android.soundrecorder,"
+    />
+    
+    <!-- customer request -->
+	<package label="customer for HK"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.smartone.aon,com.smartone.wificalling," 
+        area="SUGAR_HK,SUGAR_TW,"
+    />
+
+	<package label="customer for Sugar"
+        behavior="ASSUMING_IN_SYSTEM,"
+        names="com.redteamobile.global.roaming," 
+        area="SUGAR_CN,SUGAR_HK,SUGAR_TW,"
+    />    
+    
+
+    <!-- ALLOW_LOCATION -->
+    <package label="baidu map"
+        behavior="ALLOW_LOCATION,"
+        names="com.baidu.BaiduMap,"
+    />
+
+    <package label="amap"
+        behavior="ALLOW_LOCATION,"
+        names="com.amap.android,com.autonavi.minimap,"
+    />
+
+    <package label="didi"
+        behavior="ALLOW_LOCATION,"
+        names="com.sdu.didi.gsui,com.funcity.taxi.driver,"
+    />
+
+	<!-- Sports positioning -->
+    <package label="Sports positioning"
+        behavior="ALLOW_LOCATION,"
+        names="im.xingzhe,com.bamboo.ibike,com.topgether.sixfoot,cc.iriding.mobile,com.ape.pedometer,com.codoon.gps,com.yuedong.sport,"
+    />
+
+    <!-- disabled component begin -->
+    <package label="igexin_component"
+        behavior="DISABLED_COMPONENT,"
+        names="com.nexstreaming.app.assetstore.tinno.china/com.igexin.sdk.PushReceiver,com.nexstreaming.app.assetstore.tinno.china/com.igexin.sdk.PushService,"
+        area="SUGAR_CN,"
+    />
+
+    <!-- disabled component end -->
+
+
+    <!-- reject bg caller call package begin-->
+    <package label="qqdownloader"
+        behavior="ASSUMING_NOT_IN_SYSTEM,"
+        names="com.tencent.android.qqdownloader,"
+    />
+    <!-- reject bg caller call package end-->
+
+    <!-- reject activity begin-->
+    <package label="webo_activities_reject"
+        behavior="REJECT_ACTIVITY_WAKEUP,"
+        names="com.sina.weibo.page.NewCardListActivity,"
+    />
+
+    <!-- 3rd push server activity begin-->
+    <package label="jpush_activities_reject"
+        behavior="REJECT_ACTIVITY_WAKEUP,"
+        names="cn.jpush.android.ui.PushActivity,cn.jpush.android.ui.PopWinActivity,"
+    />
+
+    <package label="igexin_activities_reject"
+        behavior="REJECT_ACTIVITY_WAKEUP,"
+        names="com.igexin.sdk.PushActivity,com.igexin.sdk.GActivity,com.igexin.getuiext.activity.GetuiExtActivity,"
+    />
+    <!-- 3rd push server activity end-->
+
+    <!-- reject activity end-->
+
+    <package label="lab_test_mode"
+        behavior="NO_LIMIT,"
+        names="com.orangelabs*,org.opencv.engine,com.android.cts.verifier,com.tinno.*,com.lunarlabs.panda,com.smartviser.visersettings,"
+    />
+
+    <!-- The black caller begin-->
+    <package label="black caller"
+        behavior="DISALLOW_BLACK_CALLER,"
+        names="com.tencent.android.qqdownloader,"
+    />
+    <!--  The black caller end-->
+
+</config>

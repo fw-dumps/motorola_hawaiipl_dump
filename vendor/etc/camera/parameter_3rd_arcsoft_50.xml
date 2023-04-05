@@ -1,0 +1,205 @@
+<TinnoParameter>
+    <!-- Begin:  Hdr, LLHdr 检测阈值 -->
+    <hdrdetect>
+        <param_table name="camera_0"> <!-- 主摄 -->
+            <con_val_hdr>0.5</con_val_hdr>     <!-- 0~1, float -->
+            <con_val_llhdr>0.5</con_val_llhdr> <!-- 0~1, float -->
+        </param_table>
+
+        <param_table name="camera_1"> <!-- 前摄 -->
+            <con_val_hdr>0.85</con_val_hdr>     <!-- 0~1, float -->
+            <con_val_llhdr>0.98</con_val_llhdr> <!-- 0~1, float -->
+        </param_table>
+
+        <param_table name="camera_2"> <!-- 广角 -->
+            <con_val_hdr>0.5</con_val_hdr>     <!-- 0~1, float -->
+            <con_val_llhdr>0.9</con_val_llhdr> <!-- 0~1, float -->
+        </param_table>
+    </hdrdetect>
+    <!-- End:  Hdr, LLHdr 检测阈值 -->
+
+    <hdrshot>
+        <param_table name="camera_0"> <!-- 主摄 -->
+            <ev_min>-6</ev_min>
+            <ev_max>3</ev_max>
+            <ev_no_detect_min>-6</ev_no_detect_min>
+            <ev_no_detect_max>3</ev_no_detect_max>
+            <ev_min_face>-6</ev_min_face>
+            <ev_max_face>3</ev_max_face>
+            <ev_no_detect_min_face>-6</ev_no_detect_min_face>
+            <ev_no_detect_max_face>3</ev_no_detect_max_face>
+            <tone_length>20</tone_length>  <!-- 0~100 -->
+            <brightness>-10</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>     <!-- 0~100 -->
+            <contrast>30</contrast>        <!-- 0~100 -->
+            <tone_length_no_detect>20</tone_length_no_detect>
+            <brightness_no_detect>-10</brightness_no_detect>
+            <saturation_no_detect>0</saturation_no_detect>
+            <contrast_no_detect>30</contrast_no_detect>
+        </param_table>
+        <param_table name="camera_1"> <!-- 前摄 -->
+            <ev_min>-6</ev_min>
+            <ev_max>1</ev_max>
+            <ev_no_detect_min>-5</ev_no_detect_min>
+            <ev_no_detect_max>1</ev_no_detect_max>
+            <ev_min_face>-6</ev_min_face>
+            <ev_max_face>1</ev_max_face>
+            <ev_no_detect_min_face>-5</ev_no_detect_min_face>
+            <ev_no_detect_max_face>1</ev_no_detect_max_face>
+            <tone_length>20</tone_length>  <!-- 0~100 -->
+            <brightness>10</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>     <!-- 0~100 -->
+            <contrast>70</contrast>        <!-- 0~100 -->
+            <tone_length_no_detect>20</tone_length_no_detect>
+            <brightness_no_detect>10</brightness_no_detect>
+            <saturation_no_detect>0</saturation_no_detect>
+            <contrast_no_detect>70</contrast_no_detect>
+        </param_table>
+        <param_table name="camera_2"> <!-- 广角 -->
+            <ev_min>-6</ev_min>
+            <ev_max>2</ev_max>
+            <ev_no_detect_min>-5</ev_no_detect_min>
+            <ev_no_detect_max>2</ev_no_detect_max>
+            <ev_min_face>-6</ev_min_face>
+            <ev_max_face>2</ev_max_face>
+            <ev_no_detect_min_face>-5</ev_no_detect_min_face>
+            <ev_no_detect_max_face>2</ev_no_detect_max_face>
+            <tone_length>10</tone_length>  <!-- 0~100,10 -->
+            <brightness>0</brightness>     <!-- -100~+100,0 -->
+            <saturation>0</saturation>     <!-- 0~100,0 -->
+            <contrast>70</contrast>        <!-- 0~100,30 -->
+            <tone_length_no_detect>10</tone_length_no_detect>
+            <brightness_no_detect>0</brightness_no_detect>
+            <saturation_no_detect>0</saturation_no_detect>
+            <contrast_no_detect>70</contrast_no_detect>
+        </param_table>
+    </hdrshot>
+
+    <softlightdetect>
+        <bv_threshold>-20</bv_threshold>
+    </softlightdetect>
+
+    <llhdrshot>
+        <param_table name="camera_0"> <!-- 主摄 -->
+            <ev_min>-8</ev_min>
+            <ev_not_detect_min>-8</ev_not_detect_min>
+            <ev_min_face>-8</ev_min_face>
+            <ev_not_detect_min_face>-8</ev_not_detect_min_face>
+            <tone_length>0</tone_length> <!-- 0~100 -->
+            <brightness>0</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>   <!-- 0~100 -->
+            <contrast>0</contrast>       <!-- 0~100 -->
+            <tone_length_no_detect>0</tone_length_no_detect> <!-- 0~100 -->
+            <brightness_no_detect>0</brightness_no_detect>   <!-- -100~+100 -->
+            <saturation_no_detect>0</saturation_no_detect>   <!-- 0~100 -->
+            <contrast_no_detect>0</contrast_no_detect>       <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_1"> <!-- 前摄 -->
+            <ev_min>-6</ev_min>
+            <ev_not_detect_min>-5</ev_not_detect_min>
+            <ev_min_face>-6</ev_min_face>
+            <ev_not_detect_min_face>-5</ev_not_detect_min_face>
+            <tone_length>20</tone_length> <!-- 0~100 -->
+            <brightness>20</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>   <!-- 0~100 -->
+            <contrast>70</contrast>       <!-- 0~100 -->
+            <tone_length_no_detect>20</tone_length_no_detect> <!-- 0~100 -->
+            <brightness_no_detect>20</brightness_no_detect>   <!-- -100~+100 -->
+            <saturation_no_detect>0</saturation_no_detect>   <!-- 0~100 -->
+            <contrast_no_detect>70</contrast_no_detect>       <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_2"> <!-- 广角 -->
+            <ev_min>-5</ev_min>
+            <ev_not_detect_min>-5</ev_not_detect_min>
+            <ev_min_face>-7</ev_min_face>
+            <ev_not_detect_min_face>-5</ev_not_detect_min_face>
+            <tone_length>0</tone_length> <!-- 0~100，0 -->
+            <brightness>0</brightness>   <!-- -100~+100,0 -->
+            <saturation>0</saturation>   <!-- 0~100,0 -->
+            <contrast>0</contrast>       <!-- 0~100,0 -->
+            <tone_length_no_detect>0</tone_length_no_detect> <!-- 0~100,0 -->
+            <brightness_no_detect>0</brightness_no_detect>   <!-- -100~+100,0 -->
+            <saturation_no_detect>0</saturation_no_detect>   <!-- 0~100,0 -->
+            <contrast_no_detect>0</contrast_no_detect>       <!-- 0~100,0 -->
+        </param_table>
+    </llhdrshot>
+
+    <!-- Begin: 弱HDR参数 -->
+    <hdrshot_off>
+        <param_table name="camera_0"> <!-- 主摄 -->
+            <ev_min>-3</ev_min>
+            <ev_max>2</ev_max>
+
+            <ev_min_face>-3</ev_min_face>
+            <ev_max_face>2</ev_max_face>
+
+            <tone_length>20</tone_length>  <!-- 0~100 -->
+            <brightness>-10</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>     <!-- 0~100 -->
+            <contrast>30</contrast>        <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_1"> <!-- 前摄 -->
+            <ev_min>-6</ev_min>
+            <ev_max>1</ev_max>
+
+            <ev_min_face>-6</ev_min_face>
+            <ev_max_face>1</ev_max_face>
+
+            <tone_length>20</tone_length>  <!-- 0~100 -->
+            <brightness>20</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>     <!-- 0~100 -->
+            <contrast>20</contrast>        <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_2"> <!-- 广角 -->
+            <ev_min>-3</ev_min>
+            <ev_max>0</ev_max>
+
+            <ev_min_face>-3</ev_min_face>
+            <ev_max_face>0</ev_max_face>
+
+            <tone_length>10</tone_length>  <!-- 0~100 -->
+            <brightness>0</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>     <!-- 0~100 -->
+            <contrast>30</contrast>        <!-- 0~100 -->
+        </param_table>
+    </hdrshot_off>
+
+    <llhdrshot_off>
+        <param_table name="camera_0"> <!-- 主摄 -->
+            <ev_min>-3</ev_min>
+
+            <ev_min_face>-3</ev_min_face>
+
+            <tone_length>0</tone_length> <!-- 0~100 -->
+            <brightness>0</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>   <!-- 0~100 -->
+            <contrast>0</contrast>       <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_1"> <!-- 前摄 -->
+            <ev_min>-6</ev_min>
+
+            <ev_min_face>-6</ev_min_face>
+
+            <tone_length>20</tone_length> <!-- 0~100 -->
+            <brightness>20</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>   <!-- 0~100 -->
+            <contrast>20</contrast>       <!-- 0~100 -->
+        </param_table>
+        <param_table name="camera_2"> <!-- 广角 -->
+            <ev_min>-3</ev_min>
+
+            <ev_min_face>-3</ev_min_face>
+
+            <tone_length>0</tone_length> <!-- 0~100 -->
+            <brightness>0</brightness>   <!-- -100~+100 -->
+            <saturation>0</saturation>   <!-- 0~100 -->
+            <contrast>0</contrast>       <!-- 0~100 -->
+        </param_table>
+    </llhdrshot_off>
+    <!-- End: 弱HDR参数 -->
+
+    <nightshot>
+        <iso_min_back>2800</iso_min_back>
+        <iso_min_front>2400</iso_min_front>
+    </nightshot>
+</TinnoParameter>
