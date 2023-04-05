@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!--<package>system/operator-app/priv-app/ApeFMRadio_S_MTK</package>-->
+    <package>system/app/fpExtensionSvc2</package>
+    <package>system/operator-app/app/KerrInlineSample</package>
+</config>

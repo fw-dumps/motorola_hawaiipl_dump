@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <region name="EMEA">
+        <path>ChromeHomePageProviderMoto</path>
+        <path>PartnerBookmarksProviderMoto</path>
+        <path include="vfit,timit,windit">MDIP</path>
+        <path include="timit">MotoLauncherConfigTimit</path>
+        <path include="retru">MotoLauncherConfigYandexLenovo</path>
+        <path include="playpl">MotoLauncherConfigPlaypl</path>
+        <path exclude="orafr,bouyfr,altfr,altice,vfit,timit,windit,reteu">ApeFMRadio_S_MTK</path>
+        <path exclude="playpl,retru,timit">MotoLauncherConfigLenovo</path>
+        <path>KerrInlineSample</path>
+        <path include="reteu,retgb,retmea,retru">IronSource</path>
+    </region>
+
+    <region name="LATAM">
+    	<path include="attmx">MDIP</path>
+	<path include="attmx">ClaroContenedor</path>
+	<path include="amxmx">TelcelContenedor</path>
+	<path include="amxcl,amxco,amxpe,amxla,openla,amxmx">SysDLL</path>
+	<path include="amxbr,retbr,tefbr,niibr,oibr,timbr,openmx">BRApps2</path>
+	<path include="amxla,amxar,amxbr,retbr,amxcl,amxco,amxmx,amxpe">ChromeHomePageProviderMoto</path>
+	<path include="amxla,amxar,amxbr,retbr,amxcl,amxco,amxmx,amxpe">PartnerBookmarksProviderMoto</path>
+	<path include="amxcl,amxla,amxpe,amxco">MotoLauncherConfigClaro</path>
+	<path include="amxmx">MotoLauncherConfigTelcel</path>
+	<path>ApeFMRadio_S_MTK</path>
+	<path exclude="amxar,amxbr,retbr,amxcl,amxla,amxpe,amxco,amxmx">PartnerBookmarksProviderGms</path>
+	<path exclude="amxcl,amxla,amxpe,amxco,amxmx">MotoLauncherConfigLenovo</path>
+	<path>KerrInlineSample</path>
+	<path include="retla,retar,retbr,retcl,openmx,retpe">IronSource</path>
+    </region>
+
+    <region name="APAC">
+        <path>PartnerBookmarksProviderGms</path>
+        <path>ApeFMRadio_S_MTK</path>
+        <path>MotoLauncherConfigLenovo</path>
+        <path>KerrInlineSample</path>
+        <path include="retapac,retjio,retid,retin,retjp,retkr,retsea">IronSource</path>
+    </region>
+
+    <region name="unknown">
+        <path>ApeFMRadio_S_MTK</path>
+        <path>KerrInlineSample</path>
+    </region>
+</config>

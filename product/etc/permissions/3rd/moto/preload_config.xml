@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <region name="EMEA">
+        <path>MotoFeedback</path>
+        <path>ChromeHomePageProviderMoto</path>
+        <path>PartnerBookmarksProviderMoto</path>
+        <path>MotoLauncherConfig</path>
+        <path include="vfit,timit,windit">MDIP</path>
+        <path include="timit">MotoLauncherConfigTimit</path>
+        <path exclude="timit">MotoLauncherConfig</path>
+        <path include="retru">MotoLauncherConfigYandex</path>
+        <path exclude="retru">MotoLauncherConfig</path>
+        <path include="playpl">MotoLauncherConfigPlaypl</path>
+        <path exclude="playpl">MotoLauncherConfig</path>
+        <path include="timit">Satispay</path>
+        <path exclude="orafr,bouyfr,altfr,altice,vfit,timit,windit,reteu">ApeFMRadio_S_MTK</path>
+        <path>KerrInlineSample</path>
+        <path>InteractiveWallpaper</path>
+        <path include="reteu,retgb,retmea,retru">IronSource</path>
+    </region>
+
+    <region name="LATAM">
+	<path>MotoLauncherConfig</path>
+	<path>MotoFeedback</path>
+    	<path include="attmx">MDIP</path>
+	<path include="amxar,amxbr,amxla,amxco,amxcl,amxpe">ClaroContenedor</path>
+	<path include="amxmx">TelcelContenedor</path>
+	<path include="amxcl,amxco,amxpe,amxla,openla,amxmx">SysDLL</path>
+	<path include="amxbr">StubMotorolaClaro</path>
+	<path include="amxbr,retbr,tefbr,niibr,oibr,timbr,openmx">BRApps2</path>
+	<path include="amxla,amxar,amxbr,retbr,amxcl,amxco,amxmx,amxpe">ChromeHomePageProviderMoto</path>
+	<path include="amxla,amxar,amxbr,retbr,amxcl,amxco,amxmx,amxpe">PartnerBookmarksProviderMoto</path>
+	<path include="amxcl,amxla,amxpe,amxco">MotoLauncherConfigClaro</path>
+	<path exclude="amxcl,amxla,amxpe,amxco">MotoLauncherConfig</path>
+	<path include="amxmx">MotoLauncherConfigTelcel</path>
+	<path exclude="amxmx">MotoLauncherConfig</path>
+	<path>ApeFMRadio_S_MTK</path>
+	<path exclude="amxar,amxbr,retbr,amxcl,amxla,amxpe,amxco,amxmx">PartnerBookmarksProviderGms</path>
+        <path include="openmx,altmx,tefmx,amxmx,attmx">PayJoyAccess</path>
+        <path>KerrInlineSample</path>
+        <path>InteractiveWallpaper</path>
+        <path include="retla,retar,retbr,retcl,openmx,retpe">IronSource</path>
+    </region>
+
+    <region name="APAC">
+        <path>MotoFeedback</path>
+        <path>PartnerBookmarksProviderGms</path>
+        <path>ApeFMRadio_S_MTK</path>
+	<path>MotoLauncherConfig</path>
+	<path>KerrInlineSample</path>
+	<path>InteractiveWallpaper</path>
+	<path include="retapac,retjio,retid,retin,retjp,retkr,retsea">IronSource</path>
+	<path include="retin,retjio">MotoGlance</path>
+    </region>
+
+    <region name="unknown">
+        <path>ApeFMRadio_S_MTK</path>
+        <path>MotoFeedback</path>
+        <path>KerrInlineSample</path>
+        <path>InteractiveWallpaper</path>
+    </region>
+</config>
